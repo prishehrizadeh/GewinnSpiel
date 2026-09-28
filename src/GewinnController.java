@@ -15,9 +15,11 @@ public class GewinnController {
             view.eingabeFeld.setText("");
             view.eingabeFeld.setEnabled(true);
             view.button.setEnabled(false);
+            view.button.setText("Noch einmal!");
         });
 
         view.button.setEnabled(false);
+        view.button.setText("Noch einmal!");
     }
 
     private void spieleRunde() {
@@ -46,6 +48,7 @@ public class GewinnController {
 
             view.eingabeFeld.setEnabled(false);
             view.button.setEnabled(true);
+            view.button.setText("Neue Runde");
 
             if (model.hatGewonnen()) {
                 JOptionPane.showMessageDialog(view, "Du hast gewonnen!");
@@ -60,3 +63,4 @@ public class GewinnController {
         }
     }
 }
+
